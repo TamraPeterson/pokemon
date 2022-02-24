@@ -12,5 +12,13 @@ class MyPokesService {
     console.log('savepoke', res.data)
     ProxyState.myPokes = [...ProxyState.myPokes, new Poke(res.data)]
   }
+
+  async removePoke() {
+
+    let id = ProxyState.activePoke.name
+    const res = await sandboxApi.delete(id)
+    console.log('remove poke', res.data)
+
+  }
 }
 export const myPokesService = new MyPokesService()

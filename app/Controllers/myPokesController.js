@@ -25,4 +25,12 @@ export class MyPokesController {
       console.error(error)
     }
   }
+
+  async removePoke() {
+    try {
+      await myPokesService.removePoke()
+    } catch (error) {
+      console.error(error)
+    }
+  }
 }

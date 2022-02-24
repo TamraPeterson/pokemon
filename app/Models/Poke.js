@@ -17,6 +17,6 @@ export class Poke {
 
   get ListTemplate() {
     return `
-    <li>${this.name}</li>`
+    <li class="p-3">${this.name}<button class="btn btn-warning" onclick="app.myPokesController.removePoke()">remove</button></li>`
   }
 }
